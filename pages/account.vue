@@ -36,7 +36,7 @@
                       .photoname
                         | <strong>{{ image.name }}</strong>
                     div(slot='media')
-                      img(:src='image.url', @click="clickPop(image)")
+                      img(:src='image.url', @click="image.activePhoto = true")
                       vs-popup.holamundo(:title='image.name', :active.sync='image.activePhoto')
                         img(:src='image.url')
                     div
